@@ -32,3 +32,4 @@ while not in_stock:
         product_name = browser.find_element(By.XPATH, value='//*[@id="root"]/div/div[3]/h1').text
         telegram_bot_send_text(f'🚨 {product_name} is available to ship:\n{browser.current_url}')
         time.sleep(60)
+        browser.refresh()
